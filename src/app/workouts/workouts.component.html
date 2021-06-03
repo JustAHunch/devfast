@@ -1,0 +1,13 @@
+<h2>오늘의 운동</h2>
+<ul class="workouts">
+  <li *ngFor="let workout of workouts">
+    <article
+      (click)="onSelect(workout)"
+      [class.selected]="workout === selectedWorkout">
+      <h1>{{workout.name}}</h1>
+      <p>운동 횟수: {{workout.count}}</p>
+    </article>
+  </li>
+</ul>
+<app-workout-detail [workout]="selectedWorkout">
+</app-workout-detail>

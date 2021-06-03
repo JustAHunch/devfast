@@ -1,0 +1,7 @@
+<div *ngIf="workout">
+  <h2>{{workout.name}}</h2>
+  <label>운동 횟수:
+    <input [(ngModel)]="workout.count"
+            type="number" placeholder="횟수">
+  </label>
+</div>
